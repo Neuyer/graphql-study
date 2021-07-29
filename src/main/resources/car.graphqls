@@ -1,0 +1,27 @@
+type Car {
+    uuid: ID!
+    modelName: String!
+    colorName: String!
+    brandName: String!
+    numberOfSeats: Int!
+    numberOfHorses: Float!
+}
+
+input CarInput {
+    modelName: String!
+    colorName: String!
+    brandName: String!
+    numberOfSeats: Int!
+    numberOfHorses: Float!
+}
+
+type Query {
+    findCarByModel(modelName: String): Car
+    findAllCars: [Car]
+}
+
+type Mutation {
+    registerNewCar(
+        input: CarInput
+    ) :Car!
+}

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: graphql-study
+  data:
+    mongodb:
+      uri: mongodb+srv://root:root@test.xrxsk.mongodb.net/test?retryWrites=true&w=majority
+graphiql:
+  mapping: /graphiql
+  endpoint:
+    graphql: /graphql
